@@ -4,18 +4,18 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-etherscan";
 
 // Template
-const { ZHEJIANG_RPC, PRIVATE_KEY, ETHERSCAN_API } = process.env;
+const { SEPOLIA_RPC, PRIVATE_KEY, ETHERSCAN_API } = process.env;
 
 const config: HardhatUserConfig = {
   networks: {
-    zhejiang: {
-      url: ZHEJIANG_RPC || "",
+    sepolia: {
+      url: SEPOLIA_RPC || "",
       accounts: [PRIVATE_KEY as string],
     },
   },
   etherscan: {
     apiKey: {
-      zhejiang: (ETHERSCAN_API as string) || "",
+      sepolia: (ETHERSCAN_API as string) || "",
     },
   },
   solidity: {
